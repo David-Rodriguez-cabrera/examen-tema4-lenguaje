@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!ELEMENT Surcursales (surcursal+)>
+
+<!ELEMENT surcursal (direccion+,empleado,fecha,observaciones?,articulo+)>
+<!ATTLIST surcursal
+    codigo CDATA #REQUIRED
+  >
+
+<!ELEMENT direccion (#PCDATA)>
+
+<!ELEMENT empleado (#PCDATA)>
+
+<!ELEMENT fecha (#PCDATA)>
+
+<!ELEMENT observaciones (#PCDATA)>
+
+<!ELEMENT articulo (numero,precio,direccion+,observaciones,plazo)>
+<!ATTLIST articulo
+    codigo CDATA #REQUIRED
+  >
+
+<!ELEMENT numero (#PCDATA)>
+
+<!ELEMENT precio (#PCDATA)>
+
+<!ELEMENT plazo (#PCDATA)>

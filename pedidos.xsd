@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
+    <xsd:element name="Surcursales" type="SurcursalesDatos" />
+    <xsd:complexType name="SurcursalesDatos">
+        <xsd:sequence>
+            <xsd:element name="surcursal" type="surcursalDatos" minOccurs="1" maxOccurs="unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="surcursalDatos">
+        <xsd:sequence>
+            <xsd:element name="direccion" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+            <xsd:element name="empleado" type="xsd:string" />
+            <xsd:element name="fecha" type="xsd:date" />
+            <xsd:element name="observaciones" type="xsd:string" minOccurs="0" />
+            <xsd:element name="articulo" type="articuloDatos" minOccurs="1" maxOccurs="unbounded" />
+        </xsd:sequence>
+        <xsd:attribute name="codigo" type="codigoSurcursal" use="required" />
+    </xsd:complexType>
+    <xsd:simpleType name="codigoSurcursal">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[A-Z]{1}[0-9]{7}" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="articuloDatos">
+        <xsd:sequence>
+            <xsd:element name="numero" type="xsd:integer"/>
+            <xsd:element name="precio" type="xsd:decimal" />
+            <xsd:element name="direccion" type="xsd:string" />
+            <xsd:element name="observaciones" type="xsd:string" />
+            <xsd:element name="plazo" type="xsd:string" />
+        </xsd:sequence>
+        <xsd:attribute name="codigo" type="codigoArticulo" use="required" />
+    </xsd:complexType>
+    <xsd:simpleType name="codigoArticulo">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[A-Z]{3}-[0-9]{3}" />
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>

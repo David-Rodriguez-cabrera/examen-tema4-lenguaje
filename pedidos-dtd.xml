@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Surcursales SYSTEM "pedidos.dtd">
+
+<Surcursales>
+
+        <surcursal codigo="A1234567">
+            <direccion>Calle paloma 10</direccion>
+            <empleado>Paco</empleado>
+            <fecha>5-2-2021</fecha>
+            <observaciones>incompleto</observaciones>
+        
+        
+        <articulo codigo="SCA-123">
+            <numero>1</numero>
+            <precio>50</precio>
+            <direccion>Calle Jesulin de Ubrique</direccion>
+            <observaciones>Portatil en bues estado, con un intel Core...</observaciones>
+            <plazo>50</plazo>
+        </articulo>
+        
+        <articulo codigo="SCA-124">
+            <numero>2</numero>
+            <precio>40</precio>
+            <direccion>Calle Pepe Botella</direccion>
+            <observaciones>Portatil en bues estado, con un intel Core...</observaciones>
+            <plazo>40</plazo>
+        </articulo>
+        </surcursal>
+        
+        <surcursal codigo="B1234567">
+            <direccion>Calle paloma 10</direccion>
+            <empleado>Paco</empleado>
+            <fecha>2021-01-05</fecha>
+            <observaciones></observaciones>
+        
+        
+        <articulo codigo="SCB-123">
+            <numero>1</numero>
+            <precio>100</precio>
+            <direccion>Calle Manzana</direccion>
+            <observaciones>Ordedador de sobremesa en bues estado, con un intel Core...</observaciones>
+            <plazo>100</plazo>
+        </articulo>
+</surcursal>
+</Surcursales>
